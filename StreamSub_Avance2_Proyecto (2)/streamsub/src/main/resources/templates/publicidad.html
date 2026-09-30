@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>StreamSub - Publicidad</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" th:href="@{/css/estilos.css}">
+</head>
+<body>
+<div th:replace="~{fragments/nav :: nav}"></div>
+<div class="container my-4">
+  <div class="p-5 mb-4 rounded text-white" style="background-color:#141414;">
+    <h1>¡Lleva tu entretenimiento a otro nivel!</h1>
+    <p class="lead">Miles de películas y series en un solo lugar. Elige el plan que se ajuste a ti y disfruta sin límites.</p>
+    <a class="btn btn-streamsub btn-lg" th:href="@{/planes}">Ver planes disponibles</a>
+  </div>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card h-100"><div class="card-body">
+        <h5 class="card-title">Contenido exclusivo</h5>
+        <p class="card-text">Catálogo curado por categorías, actualizado constantemente.</p>
+      </div></div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100"><div class="card-body">
+        <h5 class="card-title">Multi-dispositivo</h5>
+        <p class="card-text">Disfruta en varias pantallas simultáneas según tu plan.</p>
+      </div></div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100"><div class="card-body">
+        <h5 class="card-title">Cancela cuando quieras</h5>
+        <p class="card-text">Sin permanencia obligatoria: mantén el acceso hasta el fin de tu periodo pagado.</p>
+      </div></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

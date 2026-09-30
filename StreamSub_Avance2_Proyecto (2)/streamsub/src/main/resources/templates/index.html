@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>StreamSub - Inicio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" th:href="@{/css/estilos.css}">
+</head>
+<body>
+<div th:replace="~{fragments/nav :: nav}"></div>
+<div class="container my-4">
+  <h2 class="mb-1">Panel principal</h2>
+  <p class="text-muted">Resumen general del Sistema de Suscripción a Streaming (datos de prueba en memoria).</p>
+  <div class="row g-3 mt-2">
+    <div class="col-md-4 col-6">
+      <div class="card dashboard-card shadow-sm"><div class="card-body">
+        <h6 class="text-muted">Categorías</h6>
+        <h3 th:text="${totalCategorias}">0</h3>
+      </div></div>
+    </div>
+    <div class="col-md-4 col-6">
+      <div class="card dashboard-card shadow-sm"><div class="card-body">
+        <h6 class="text-muted">Contenido</h6>
+        <h3 th:text="${totalContenidos}">0</h3>
+      </div></div>
+    </div>
+    <div class="col-md-4 col-6">
+      <div class="card dashboard-card shadow-sm"><div class="card-body">
+        <h6 class="text-muted">Planes</h6>
+        <h3 th:text="${totalPlanes}">0</h3>
+      </div></div>
+    </div>
+    <div class="col-md-4 col-6">
+      <div class="card dashboard-card shadow-sm"><div class="card-body">
+        <h6 class="text-muted">Usuarios</h6>
+        <h3 th:text="${totalUsuarios}">0</h3>
+      </div></div>
+    </div>
+    <div class="col-md-4 col-6">
+      <div class="card dashboard-card shadow-sm"><div class="card-body">
+        <h6 class="text-muted">Métodos de Pago</h6>
+        <h3 th:text="${totalMetodosPago}">0</h3>
+      </div></div>
+    </div>
+    <div class="col-md-4 col-6">
+      <div class="card dashboard-card shadow-sm"><div class="card-body">
+        <h6 class="text-muted">Suscripciones</h6>
+        <h3 th:text="${totalSuscripciones}">0</h3>
+      </div></div>
+    </div>
+  </div>
+  <div class="alert alert-info mt-4">
+    Este avance no incluye métricas de series de tiempo ni acceso a base de datos, conforme a lo solicitado
+    para el <strong>Avance 2</strong>. Todos los datos mostrados provienen de repositorios dummy en memoria.
+  </div>
+</div>
+</body>
+</html>
